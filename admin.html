@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#151719">
+<title>Админ-панель — Мастерская</title><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header><a class="brand" href="index.html"><span class="mark">M+</span><span><b>МАСТЕРСКАЯ</b><small>АДМИНИСТРИРОВАНИЕ</small></span></a><span id="authLabel">Панель управления</span></header>
+<main>
+<section id="loginPanel" class="panel login-panel">
+  <p class="eyebrow">ЗАКРЫТЫЙ ДОСТУП</p><h1>Вход администратора</h1>
+  <p class="muted">Войдите по email и паролю, которые вы создадите в Supabase. Регистрация посетителей на этой странице не предусмотрена.</p>
+  <form id="loginForm"><label>Email администратора<input type="email" id="email" required autocomplete="username" placeholder="admin@example.com"></label><label>Пароль<input type="password" id="password" required autocomplete="current-password" placeholder="Ваш пароль"></label><button class="btn" type="submit">Войти в панель ↗</button><p id="loginStatus" class="status" role="status"></p></form>
+</section>
+<section id="dashboard" hidden>
+  <div class="dash-head"><div><p class="eyebrow">УПРАВЛЕНИЕ МАГАЗИНОМ</p><h1>Карточки товаров<span>.</span></h1><p class="muted">Изменения сохраняются в базе и отображаются в публичном каталоге.</p></div><button id="logoutBtn" class="btn btn-outline">Выйти</button></div>
+  <div class="dashboard-grid">
+    <aside class="panel product-list"><div class="list-head"><h2>Товары</h2><button id="newBtn" class="btn btn-small">＋ Добавить</button></div><div id="productList"></div></aside>
+    <section class="panel editor">
+      <div class="editor-head"><h2 id="editorTitle">Выберите товар</h2><span class="status-pill">РЕДАКТОР</span></div>
+      <form id="productForm">
+        <input type="hidden" id="productId">
+        <label>Название товара<input id="pName" required maxlength="140"></label>
+        <div class="two-col"><label>Категория<select id="pCategory"><option value="mount">Монтаж</option><option value="print">3D-печать</option><option value="custom">На заказ</option></select></label><label>Цена (текст)<input id="pPrice" maxlength="80" placeholder="Например, от 1 500 ₽ или по запросу"></label></div>
+        <label>Короткая метка<input id="pTag" maxlength="40" placeholder="Для монтажа"></label>
+        <label>Описание<textarea id="pDescription" rows="4" required maxlength="1200"></textarea></label>
+        <div class="photo-area"><div><b>Фотография товара</b><p class="muted small">JPG, PNG или WebP. Рекомендуется до 5 МБ.</p></div><img id="photoPreview" alt="Предпросмотр фото" hidden></div>
+        <label class="upload">Выбрать фото с компьютера<input id="pPhoto" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <label>Или URL изображения<input id="pImageUrl" type="url" placeholder="https://..."></label>
+        <label class="check"><input id="pActive" type="checkbox" checked> Показывать товар в публичном каталоге</label>
+        <div class="form-actions"><button class="btn" type="submit" id="saveBtn">Сохранить изменения</button><button class="btn btn-outline" type="button" id="deleteBtn">Удалить товар</button></div>
+        <p id="editorStatus" class="status" role="status"></p>
+      </form>
+    </section>
+  </div>
+</section>
+<section id="setupWarning" class="panel warning" hidden><h2>Нужно подключить базу данных</h2><p>Откройте <code>supabase-config.js</code> и укажите URL проекта и публичный anon key Supabase. Не вставляйте service_role key в сайт.</p></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script>
+</body></html>

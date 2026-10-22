@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <meta name="description" content="Каталог авторских изделий для монтажа, 3D-печати и индивидуального заказа.">
+  <title>Каталог — Мастерская</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="На главную">
+      <span class="brand-mark">M<span>+</span></span>
+      <span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="catalog.html">Каталог</a><a href="about.html">О мастерской</a><a href="order.html">Как заказать</a>
+      <a href="account.html" id="navAccount">Войти</a>
+      <a class="nav-cart" href="order.html">Корзина <span class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="crumbs"><a href="index.html">Главная</a><span>/</span>Каталог</p>
+      <h1>Каталог <em>изделий</em></h1>
+      <p class="lead">Добавьте товары в заказ — итоговую стоимость и детали подтвердим при общении.</p>
+    </section>
+    <section class="catalog section">
+      <div class="section-head">
+        <div><p class="eyebrow dark">ФИЛЬТР</p></div>
+        <div class="filters" role="group" aria-label="Фильтр товаров">
+          <button class="filter active" data-filter="all">Все изделия</button>
+          <button class="filter" data-filter="mount">Монтаж</button>
+          <button class="filter" data-filter="print">3D-печать</button>
+          <button class="filter" data-filter="custom">На заказ</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"><p class="empty-note">Загружаем каталог…</p></div>
+      <p class="catalog-note"><span>ⓘ</span> Нажмите на изделие, чтобы открыть его отдельную страницу.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">M<span>+</span></span><span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span></a><span>Сделано с вниманием к деталям.</span><a href="catalog.html">Каталог →</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="script.js"></script>
+</body>
+</html>

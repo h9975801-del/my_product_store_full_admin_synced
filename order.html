@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <meta name="description" content="Оформите заявку: выберите изделие, опишите задачу и дождитесь подтверждения.">
+  <title>Как заказать — Мастерская</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="order">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="На главную">
+      <span class="brand-mark">M<span>+</span></span>
+      <span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="catalog.html">Каталог</a><a href="about.html">О мастерской</a><a href="order.html">Как заказать</a>
+      <a href="account.html" id="navAccount">Войти</a>
+      <a class="nav-cart" href="order.html">Корзина <span class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="order-section section order-page" id="order">
+      <div class="order-intro"><p class="crumbs"><a href="index.html">Главная</a><span>/</span>Как заказать</p><p class="eyebrow">СЛЕДУЮЩИЙ ШАГ</p><h2>Оформим<br><em>ваш заказ.</em></h2><p>Оставьте контакты и комментарий. Мы получим заявку в Telegram и свяжемся, чтобы уточнить наличие, цену и доставку.</p>
+        <div class="order-mini"><span class="mini-icon">01</span><div><b>Выберите изделие</b><small>Одно или несколько позиций</small></div></div>
+        <div class="order-mini"><span class="mini-icon">02</span><div><b>Опишите задачу</b><small>Размеры, количество, пожелания</small></div></div>
+        <div class="order-mini"><span class="mini-icon">03</span><div><b>Дождитесь подтверждения</b><small>Уточним стоимость и сроки</small></div></div>
+      </div>
+      <form class="order-form" id="orderForm">
+        <div class="form-top"><div><p class="eyebrow dark">ЗАЯВКА</p><h3>Расскажите, что нужно</h3></div><span class="form-step">01 — 03</span></div>
+        <p class="account-hint" id="accountHint"></p>
+        <div class="selected-items" id="selectedItems"></div>
+        <div class="form-row"><label>Ваше имя *<input name="name" autocomplete="name" placeholder="Как к вам обращаться" required maxlength="100"></label><label>Телефон или Telegram *<input name="contact" placeholder="@username или телефон" required maxlength="120"></label></div>
+        <label>Электронная почта (необязательно)<input type="email" name="email" autocomplete="email" placeholder="you@example.com" maxlength="160"></label>
+        <label>Комментарий к заказу<textarea name="comment" rows="4" placeholder="Количество, размеры, цвет, ссылка на пример или другие детали…" maxlength="2000"></textarea></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Согласен(на) на обработку указанных данных для ответа на мою заявку.</span></label>
+        <button class="btn btn-yellow submit-btn" type="submit">Отправить заявку в Telegram <span>↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Не указывайте платёжные данные или другую лишнюю личную информацию.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">M<span>+</span></span><span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span></a><span>Сделано с вниманием к деталям.</span><a href="catalog.html">Каталог →</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="script.js"></script>
+</body>
+</html>

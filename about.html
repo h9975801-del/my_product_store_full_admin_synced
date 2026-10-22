@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <meta name="description" content="О мастерской: собственное изготовление, практичный дизайн и заказ напрямую.">
+  <title>О мастерской — Мастерская</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="На главную">
+      <span class="brand-mark">M<span>+</span></span>
+      <span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="catalog.html">Каталог</a><a href="about.html">О мастерской</a><a href="order.html">Как заказать</a>
+      <a href="account.html" id="navAccount">Войти</a>
+      <a class="nav-cart" href="order.html">Корзина <span class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="crumbs"><a href="index.html">Главная</a><span>/</span>О мастерской</p>
+      <h1>О <em>мастерской</em></h1>
+      <p class="lead">Практичные аксессуары для монтажа, отделки и повседневных задач — выбирайте готовые изделия или заказывайте индивидуальное изготовление.</p>
+    </section>
+    <section class="catalog section">
+      <div class="about-grid">
+        <div class="about-card"><span class="feature-icon">⌁</span><h3>Продумано для дела</h3><p>Фокус на удобстве и практическом применении.</p></div>
+        <div class="about-card"><span class="feature-icon">◇</span><h3>Собственное изготовление</h3><p>Обсуждаем материалы, размеры и комплектацию.</p></div>
+        <div class="about-card"><span class="feature-icon">↗</span><h3>Прямая связь</h3><p>Заявка поступает напрямую в Telegram.</p></div>
+      </div>
+      <div class="checks"><span>✓ Практичный дизайн</span><span>✓ Заказ напрямую</span><span>✓ Изготовление под задачу</span></div>
+    </section>
+    <section class="cta-band"><h2>Посмотрите, что мы делаем.</h2><a class="btn btn-dark" href="catalog.html">Открыть каталог <span>→</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">M<span>+</span></span><span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span></a><span>Сделано с вниманием к деталям.</span><a href="catalog.html">Каталог →</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="script.js"></script>
+</body>
+</html>

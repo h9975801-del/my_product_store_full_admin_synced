@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <meta name="description" content="Страница изделия: описание, цена и добавление в заказ.">
+  <title>Изделие — Мастерская</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="На главную">
+      <span class="brand-mark">M<span>+</span></span>
+      <span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="catalog.html">Каталог</a><a href="about.html">О мастерской</a><a href="order.html">Как заказать</a>
+      <a href="account.html" id="navAccount">Войти</a>
+      <a class="nav-cart" href="order.html">Корзина <span class="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="crumbs"><a href="index.html">Главная</a><span>/</span><a href="catalog.html">Каталог</a><span>/</span><b id="crumbName">Изделие</b></p>
+      <h1 id="heroTitle">Изделие</h1>
+    </section>
+    <section class="catalog section">
+      <div id="productPage"><p class="empty-note">Загружаем…</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">M<span>+</span></span><span><b>МАСТЕРСКАЯ</b><small>ПОЛЕЗНЫЕ ИЗДЕЛИЯ</small></span></a><span>Сделано с вниманием к деталям.</span><a href="catalog.html">Каталог →</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="script.js"></script>
+</body>
+</html>
