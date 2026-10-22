@@ -34,8 +34,16 @@
       </form>
     </section>
   </div>
+  <section id="usersPanel" class="panel users-panel" hidden>
+    <div class="users-top"><div><p class="eyebrow">АККАУНТЫ И ПОКУПКИ</p><h2>Покупатели <span id="usersCount" class="users-count">0</span></h2><p class="muted">Список аккаунтов, сохранённые корзины и история заказов.</p></div><button id="refreshUsersBtn" class="btn btn-outline">Обновить список</button></div>
+    <div class="users-layout">
+      <aside class="users-list-column"><div class="users-search-row"><input id="userSearch" type="search" placeholder="Поиск по email, имени или ID"><span id="usersFiltered" class="muted"></span></div><div id="usersList" class="users-list"></div></aside>
+      <section id="userDetail" class="user-detail"><p class="muted">Выберите покупателя слева, чтобы открыть профиль, корзину и заказы.</p></section>
+    </div>
+    <p id="usersStatus" class="status" role="status"></p>
+  </section>
 </section>
 <section id="setupWarning" class="panel warning" hidden><h2>Нужно подключить базу данных</h2><p>Откройте <code>supabase-config.js</code> и укажите URL проекта и публичный anon key Supabase. Не вставляйте service_role key в сайт.</p></section>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script><script src="admin-users.js"></script>
 </body></html>
