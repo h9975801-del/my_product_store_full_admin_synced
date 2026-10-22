@@ -258,7 +258,7 @@ async function pullCart(merge){
 }
 function updateNavAccount(){
   const a=$("navAccount");if(!a)return;
-  a.textContent=currentUser?"Кабинет":"Войти";
+  a.textContent=currentUser?"Кабинет":"Вход / регистрация";
   a.hidden=!db;
 }
 async function initAuth(){
